@@ -63,6 +63,8 @@
     .publish-btn.instagram { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
     .reset-link { background: none; border: none; color: var(--text-tertiary); text-decoration: underline; margin-top: 20px; font-size: 0.8rem; cursor: pointer; }
     .copyright { text-align: center; font-size: 0.7rem; color: var(--text-tertiary); padding: 1.5rem 0 0.5rem; margin-top: 1rem; border-top: 0.5px solid var(--border-subtle); }
+    .copyright-fixed { position: fixed; bottom: 34px; left: 0; right: 0; max-width: 600px; margin: 0 auto; text-align: center; font-size: 0.7rem; color: var(--text-tertiary); padding: 6px 16px; background: var(--bg-body); z-index: 15; }
+    .copyright a, .copyright-fixed a { color: var(--accent-rose); font-weight: 700; text-decoration: underline; }
     .note-text { font-size: 0.7rem; color: var(--text-tertiary); margin-top: 12px; }
     .selected-items-badge { background: var(--bg-elevated); padding: 12px; border-radius: 20px; margin: 16px 0; font-size: 0.8rem; color: var(--text-secondary); }
 
@@ -105,6 +107,7 @@
     <div id="categoriesContainer"></div>
     <div id="selectedPreview" class="selected-items-badge">✨ No items selected yet. Tap some items above.</div>
     <div style="height: 90px;"></div>
+    <div class="copyright-fixed">© 2026 <a href="https:raiseron.com" target="_blank" rel="noopener">RAISERON INNOVATIONS</a> · PROUD TO BE INDIAN</div>
     <div class="sticky-generate-wrapper">
       <button class="generate-main-btn" id="step1GenerateBtn">✨ Generate AI Review →</button>
     </div>
@@ -151,8 +154,10 @@
       </a>
       <button id="copyFinalBtn" class="btn-secondary" style="width:100%; margin-top: 6px;">📋 Copy review again</button>
       <button id="restartFromStep1" class="reset-link">⟳ Start over (new selection)</button>
-      <div class="note-text">💡 Paste your review into Google, or share it with us on Instagram. Thank you for supporting Spm Creation!</div>
-    </div>
+     <div class="note-text">💡 Paste your review into Google, or share it with us on Instagram. Thank you for supporting Spm Creation!</div>
+     </div>
+     <div class="copyright">© 2026 <a href="https://raiseron.com" target="_blank" rel="noopener">RAISERON INNOVATIONS</a> · PROUD TO BE INDIAN</div>
+     </div>
   </div>
 
   <div class="copyright">© 2026 RAISERON INNOVATIONS · PROUD TO BE INDIAN</div>
