@@ -28,11 +28,11 @@
     .logo-container { margin-bottom: -4px; display: flex; justify-content: center; }
     .logo-svg { width: 160px; height: auto; }
     .star-rating { font-size: 28px; letter-spacing: 3px; color: #FFB83B; margin-bottom: 8px; }
-    .business-name { font-size: 1.7rem; font-weight: 700; background: linear-gradient(135deg, #C2185B 0%, #2B1E24 100%); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 8px; }
+    .business-name { font-size: 1.7rem; font-weight: 700; background: linear-gradient(135deg, #C2185B 0%, #2B1E24 100%); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 6px; }
     .biz-meta { font-size: 0.8rem; color: var(--text-tertiary); background: rgba(194,24,91,0.08); display: inline-block; padding: 4px 14px; border-radius: 40px; }
 
     .category-section { margin-bottom: 24px; background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .category-header { background: var(--accent-rose); color: white; padding: 14px 18px; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .category-header { background: var(--accent-rose); color: white; padding: 14px 18px; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
     .category-header:active { background: var(--accent-rose-hover); }
     .category-header span:first-child { display: flex; align-items: center; gap: 8px; }
     .toggle-icon { font-size: 1.2rem; transition: transform 0.2s; }
@@ -42,31 +42,31 @@
     .product-chip.selected { background: #FFD500; color: #000000; font-weight: bold; box-shadow: 0 0 0 1px white; }
     .product-chip:active { transform: scale(0.96); }
 
-    .sticky-generate-wrapper { position: fixed; bottom: 34px; left: 0; right: 0; background: linear-gradient(to top, var(--bg-body) 80%, transparent); padding: 16px 20px 28px; z-index: 10; max-width: 600px; margin: 0 auto; left: 50%; transform: translateX(-50%); }
-    .copyright-fixed { position: fixed; bottom: 0; left: 0; right: 0; max-width: 600px; margin: 0 auto; text-align: center; font-size: 0.7rem; color: var(--text-tertiary); padding: 8px 16px; background: var(--bg-body); left: 50%; transform: translateX(-50%); }
+    .sticky-generate-wrapper { position: fixed; bottom: 34px; left: 0; right: 0; background: linear-gradient(to top, var(--bg-body) 80%, transparent); padding: 16px 20px 28px; z-index: 10; max-width: 600px; margin: 0 auto; width: 100%; }
+    .copyright-fixed { position: fixed; bottom: 0; left: 0; right: 0; max-width: 600px; margin: 0 auto; text-align: center; font-size: 0.7rem; color: var(--text-tertiary); padding: 8px 16px; background: var(--bg-body); border-top: 0.5px solid var(--border-subtle); z-index: 25; }
     .copyright-fixed a { color: var(--accent-rose); font-weight: 700; text-decoration: underline; }
-    .generate-main-btn { background: var(--accent-rose); width: 100%; border: none; color: white; padding: 16px 20px; font-size: 1rem; font-weight: 700; border-radius: 60px; box-shadow: 0 6px 14px rgba(27, 42, 107, 0.2); cursor: pointer; transition: 0.1s; }
+    .generate-main-btn { background: var(--accent-rose); width: 100%; border: none; color: white; padding: 16px 20px; font-size: 1rem; font-weight: 700; border-radius: 60px; box-shadow: 0 6px 14px rgba(194,24,91,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.2s; }
     .generate-main-btn:active { transform: scale(0.97); background: var(--accent-rose-hover); }
     .generate-main-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-    .step-container { animation: fadeIn 0.25s ease; max-width: 600px; margin: 0 auto; }
+    .step-container { animation: fadeIn 0.25s ease; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
     .generated-review-card { background: var(--bg-card); border-radius: 24px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid var(--border-subtle); }
     .review-text-large { font-size: 1rem; line-height: 1.5; color: var(--text-primary); margin: 12px 0; }
     .action-buttons-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 12px; }
-    .btn-secondary, .btn-primary { background: var(--accent-rose); border: none; color: white; padding: 14px 18px; border-radius: 60px; font-weight: 600; flex: 1; text-align: center; cursor: pointer; transition: 0.1s; }
+    .btn-secondary, .btn-primary { background: var(--accent-rose); border: none; color: white; padding: 14px 18px; border-radius: 60px; font-weight: 600; flex: 1; text-align: center; cursor: pointer; }
     .btn-secondary:active, .btn-primary:active { background: var(--accent-rose-hover); }
 
     .copy-feedback { color: var(--success-green); padding: 10px; border-radius: 60px; text-align: center; font-size: 0.8rem; margin-top: 8px; }
     .final-card { background: var(--bg-card); border-radius: 28px; padding: 24px 20px; text-align: center; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
     .final-review-box { background: var(--bg-elevated); border-radius: 24px; padding: 18px; margin: 20px 0; word-break: break-word; font-size: 0.9rem; text-align: left; }
-    .publish-btn { background: var(--accent-rose); border: none; padding: 16px; border-radius: 80px; display: flex; align-items: center; justify-content: center; gap: 12px; text-decoration: none; color: white; font-weight: 600; margin-top: 10px; cursor: pointer; transition: 0.1s; width: 100%; }
-    .publish-btn:active { background: var(--accent-rose-hover); transform: scale(0.97); }
+    .publish-btn { background: var(--accent-rose); border: none; padding: 16px; border-radius: 80px; display: flex; align-items: center; justify-content: center; gap: 12px; text-decoration: none; color: white; font-weight: 700; margin: 10px 0; }
     .publish-btn.instagram { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
     .reset-link { background: none; border: none; color: var(--text-tertiary); text-decoration: underline; margin-top: 20px; font-size: 0.8rem; cursor: pointer; }
     .copyright { text-align: center; font-size: 0.7rem; color: var(--text-tertiary); padding: 1.5rem 0 0.5rem; margin-top: 1rem; border-top: 0.5px solid var(--border-subtle); }
-    .copyright a { color: var(--accent-rose); font-weight: 700; text-decoration: underline; }
+    .copyright a { color: var(--accent-rose); font-weight: 700; text-decoration: underline; }    .copyright-fixed { position: fixed; bottom: 34px; left: 0; right: 0; max-width: 600px; margin: 0 auto; text-align: center; font-size: 0.7rem; color: var(--text-tertiary); padding: 6px 16px; background: var(--bg-body); z-index: 15; }
+    .copyright a, .copyright-fixed a { color: var(--accent-rose); font-weight: 700; text-decoration: underline; }
     .note-text { font-size: 0.7rem; color: var(--text-tertiary); margin-top: 12px; }
     .selected-items-badge { background: var(--bg-elevated); padding: 12px; border-radius: 20px; margin: 16px 0; font-size: 0.8rem; color: var(--text-secondary); }
 
@@ -79,7 +79,7 @@
     .error-box { background: #fff5f5; border: 1px solid #f09595; border-radius: 16px; padding: 14px 18px; color: #a32d2d; font-size: 13px; margin: 12px 0; }
 
     @media (max-height: 600px) {
-      .sticky-generate-wrapper { position: relative; margin-top: 20px; margin-left: 0; transform: none; left: auto; }
+      .sticky-generate-wrapper { position: relative; margin-top: 20px; }
     }
   </style>
 </head>
@@ -113,6 +113,7 @@
       <button class="generate-main-btn" id="step1GenerateBtn">✨ Generate AI Review →</button>
     </div>
     <div class="copyright-fixed">© 2026 <a href="https://raiseron.com" target="_blank" rel="noopener">RAISERON INNOVATIONS</a> · PROUD TO BE INDIAN</div>
+  </div>
   </div>
 
   <!-- STEP 2 -->
